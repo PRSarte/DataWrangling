@@ -7,3 +7,6 @@ tidy = messy.pivot(index = 'Box' ,columns = 'Dimension', values = 'Value').reset
 Volume = tidy['Length'] * tidy['Width'] * tidy['Height']
 
 tidy['Volume'] = Volume
+swap= list(tidy)
+swap[1], swap[2] = swap[2], swap[1]
+tidy = tidy.reindex(columns = swap)
