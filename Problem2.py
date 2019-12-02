@@ -8,5 +8,6 @@ Volume = tidy['Length'] * tidy['Width'] * tidy['Height']
 
 tidy['Volume'] = Volume
 swap= list(tidy)
-swap[1], swap[2] = swap[2], swap[1]
+swap[1], swap[2]= swap[2], swap[1]
+swap[2],swap[3] = swap[3], swap[2]
 tidy = tidy.reindex(columns = swap)
